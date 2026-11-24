@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spelledout"
+version = "0.1.0"
+description = "Numbers and money amounts written out in words for cheques, invoices and contracts, with the grammar right (English, Arabic). Zero dependencies."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+keywords = [
+  "number-to-words", "num2words", "amount-in-words", "money", "currency", "cheque",
+  "invoice", "arabic", "tafqit", "spell-out", "iso-4217",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Financial and Insurance Industry",
+  "License :: OSI Approved :: MIT License",
+  "Natural Language :: Arabic",
+  "Natural Language :: English",
+  "Programming Language :: Python :: 3",
+  "Topic :: Office/Business :: Financial",
+  "Topic :: Text Processing :: Linguistic",
+]
+
+[project.urls]
+Homepage = "https://github.com/RealAoss/spelledout"
+Issues = "https://github.com/RealAoss/spelledout/issues"
+
+[project.scripts]
+spelledout = "spelledout.cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+packages = ["spelledout", "spelledout.lang"]
